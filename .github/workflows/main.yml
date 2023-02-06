@@ -34,3 +34,4 @@ jobs:
         per-file-ignores =
           */settings.py:E501
         max-complexity = 10
+        python -m flake8
