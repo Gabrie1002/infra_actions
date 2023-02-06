@@ -22,16 +22,6 @@ jobs:
 
     - name: Test with flake8 and django tests
       run: |
-        [flake8]
-        ignore =
-          W503,
-          F811
-        exclude =
-          tests/,
-          */migrations/,
-          venv/,
-          env/
-        per-file-ignores =
-          */settings.py:E501
-        max-complexity = 10
         python -m flake8
+        cd infra_project/
+        python manage.py test
